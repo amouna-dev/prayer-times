@@ -2,8 +2,7 @@ let ar = 'ar-EG'
 let en = 'en-us'
 let prayerArTitles = ["الفجر","الشروق","الظهر","العصر","المغرب","العشاء"]
 let prayerEnTitles = ["Fajr","Sunrise","Dhuhr","Asr","Maghrib","Isha"]
-let citiesAr = ["","","",""]
-let citiesEn = ["","","",""]
+
 
 
 function fullDay(lang) {
