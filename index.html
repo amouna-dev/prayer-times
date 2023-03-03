@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Times</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="ar">
+    <div class="container">
+        <div class="clock">
+            <div id="part_one" class="ar">
+                <div class="logo">
+                    <img src="./images/mosque.png" alt="logo" srcset="">
+                </div>
+                <div class="infos">
+                    <h2 id="city" > تونس </h2> 
+                    <h4 id="date">  </h4>
+                </div>
+                
+            </div>
+            <hr class="line">
+            <div id="part_two" class="ar">
+                <div class="card">
+                    <div class="header">
+                        <h3 class="title_prayer">الفجر</h3>
+                    </div>
+                    <div class="body">
+                        <h5 class="time_prayer" id="fajr_time">05:25</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <h3 class="title_prayer"> الشروق </h3>
+                    </div>
+                    <div class="body">
+                        <h5 class="time_prayer" id="sunrise_time">05:25</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <h3 class="title_prayer"> الظهر </h3>
+                    </div>
+                    <div class="body">
+                        <h5 class="time_prayer" id="dhuhr_time">05:25</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <h3 class="title_prayer"> العصر </h3>
+                    </div>
+                    <div class="body">
+                        <h5 class="time_prayer" id="asr_time">05:25</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <h3 class="title_prayer"> المغرب </h3>
+                    </div>
+                    <div class="body">
+                        <h5 class="time_prayer" id="sunset_time">05:25</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="header">
+                        <h3 class="title_prayer"> العشاء </h3>
+                    </div>
+                    <div class="body">
+                        <h5 class="time_prayer" id="isha_time">05:25</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cities">
+            <select name="" id="cities_ar">
+                <option value="tunis" data-country="TN"> تونس </option>
+                <option value="nabeul" data-country="TN"> نابل </option>
+                <option value="sfax" data-country="TN">صفاقس</option>
+                <option value="sousse" data-country="TN">سوسة</option>
+                <option value="Makkah al Mukarramah" data-country="َSA">مكة المكرمة</option>
+                <option value="Al Madīnah al Munawwarah" data-country="َSA"> المدينة المنورة </option>
+            </select>
+            <select name="" id="cities_en">
+                <option value="tunis" data-country="TN"> Tunis </option>
+                <option value="nabeul" data-country="TN"> Nabeul </option>
+                <option value="sfax" data-country="TN"> Sfax </option>
+                <option value="sousse" data-country="TN"> Sousse </option>
+                <option value="Makkah al Mukarramah" data-country="َSA">Makkah al Mukarramah</option>
+                <option value="Al Madīnah al Munawwarah" data-country="َSA"> Al Madīnah al Munawwarah </option>
+            </select>
+        </div>
+    </div>
+    <div id="footer">
+        <form name="lang" id="language">
+            <div class="switch" >
+                <input type="radio" class="switch-input" name="languages" value="en" id="en" >
+                <label for="en" class="switch-label switch-label-off"> English </label>
+                <input type="radio" class="switch-input" name="languages" value="ar" id="ar" checked>
+                <label for="ar" class="switch-label switch-label-on"> عربي </label>
+                <span class="switch-selection"></span>
+            </div>
+        </form>
+        
+    </div>
+</body>
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+</html>

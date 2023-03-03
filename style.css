@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'lemonade', cursive;
+}
+body {
+    font-family: 'lemonade',cursive;
+    background-color: #52cece;
+    background: url(./images/image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #04161f;
+   /* height: 100vh;*/
+}
+
+#part_one, #part_two {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#part_one.ar, #part_two.en {
+    flex-direction: row;
+    font-family: 'lemonade',cursive;
+}
+#part_one.en, #part_two.ar {
+    flex-direction: row-reverse;
+    font-family: 'lemonade',cursive;
+}
+.logo img{
+    width: 90px;
+}
+#city, #date, .logo {
+    margin: 0 40px;
+}
+#city, #date {
+    font-family: 'lemonade',cursive;
+    text-align: center;
+}
+#city {
+    font-size: 60px;
+}
+#date{
+    font-size: 25px;
+}
+.line{
+    border-color: #f6e25df3;;
+    margin: 15px 50px;
+}
+#part_two {
+    min-height: 150px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.card{
+    width: 12%;
+    height: 90%;
+    background-color: #fff;
+    font-size: 20px;
+    box-shadow: 0px 10px 5px rgb(0, 0, 0, .3);
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px ;
+}
+.header {
+    background: linear-gradient(45deg, #5df3c9c9, #05d4cff5);
+    border-radius: 10px 10px 0px 0px;
+}
+.title_prayer {
+    margin: 0;
+    font-size: 30px;
+    color: white;
+    font-weight: 400;
+}
+.time_prayer {
+    font-size: 30px;
+    margin: 20px 0;
+}
+.cities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+#cities_ar, #cities_en {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'lemonade',cursive;
+}
+#cities.ar {
+    direction: rtl;
+}
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.switch {
+    position: relative;
+    margin: 15px auto;
+    height: 35px;
+    width: 120px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+}
+.switch-label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 58px;
+    line-height: 35px;
+    font-size: 11px;
+    color: #535353;
+    text-align: center;
+    cursor: pointer;
+    font-family: "lemonade", cursive;
+}
+.switch-label:active {
+    font-weight: bold;
+}
+.switch-label-off {
+    padding-left: 2px;
+}
+.switch-label-on {
+    padding-right: 2px;
+}
+.switch-input {
+    display: none;
+}
+.switch-input:checked + .switch-label {
+    font-weight: bold;
+    /*color: rgba(0, 0, 0, 0.65);*/
+    color: #fff;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+    -webkit-transition: 0.15s ease-out;
+    -moz-transition: 0.15s ease-out;
+    -o-transition: 0.15s ease-out;
+    transition: 0.15s ease-out;
+}
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+    /* Note: left: 50% doesn't transition in WebKit */
+    
+    left: 60px;
+}
+.switch-selection {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    width: 58px;
+    height: 30px;
+    background: #35f50ae6;
+    border-radius: 3px;
+    background-image: linear-gradient(to bottom, #15f494, #35f50ae6);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+    transition: left 0.15s ease-out;
+}
+
+
+@media only screen and (max-width: 768px){
+    .card{
+        flex-basis: 31%;
+    }
+    #date {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 530px){
+    .card{
+        flex-basis: 47%;
+    }
+    #date {
+        font-size: 16px;
+    }
+    #city, #date, .logo {
+        margin: 0 20px;
+    }
+    #city {
+        font-size: 40px;
+    }
+}
+@media only screen and (max-width: 400px){
+    #city {
+        font-size: 25px;
+    }
+}
+
