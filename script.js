@@ -50,14 +50,8 @@ function traduction(lang1, lang2){
     changeCityName(lang2)
 }
 
-function getPrayersTimingsOfCity(cityName, countryName="TN"){
-    let params = {
-        country : countryName,
-        city: cityName
-    }
-    axios.get('http://api.aladhan.com/v1/timingsByCity', {
-        params: params
-      })
+function getPrayersTimingsOfCity(city, country="TN"){
+    axios.get(`https://api.aladhan.com/v1/timingsByCity?city=${city}&country=${country}&method=1`)
       .then(function (response) {
         const timings = response.data.data.timings
         fillTimeForPrayer("fajr_time", timings.Fajr)
